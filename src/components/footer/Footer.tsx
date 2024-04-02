@@ -3,10 +3,10 @@ import Logo from "../../../public/logo.png"
 
 const Footer = () => {
     return (
-        <footer className=" rounded-lg shadow">
+        <footer>
             <div className="w-full max-w-screen-xl mx-auto py-2 px-4 md:py-6">
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <a href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <Image src={Logo} className="h-8" alt="Logo" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">TranscriboApp</span>
                     </a>

@@ -3,12 +3,13 @@ import { Button } from "@/components/ui/button"
 interface PrincipalButtonProps {
     text: string,
     onSend: () => void,
-    className?: string
+    className?: string,
+    variant?: any
 }
 
-const PrincipalButton : React.FC<PrincipalButtonProps> = ({text, onSend, className}) => {
+const PrincipalButton : React.FC<PrincipalButtonProps> = ({text, onSend, className, variant}) => {
     return (
-        <Button className={className} onClick={()=> onSend}>{text}</Button>
+        <Button className={className} variant={variant} onClick={()=> onSend()}>{text}</Button>
     )
 }
 
