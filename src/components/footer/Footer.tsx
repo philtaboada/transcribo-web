@@ -29,8 +29,6 @@ const Footer = () => {
                 <span className="block text-sm  sm:text-center text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
             </div>
         </footer>
-
-
     )
 }
 
