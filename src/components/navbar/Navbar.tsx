@@ -3,8 +3,7 @@ import Link from "next/link"
 import Logo from "../../../public/logo.png"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
-import PrincipalButton from "../buttons/PrincipalButton"
-import { Button } from "../ui/button"
+import { Button, buttonVariants } from "../ui/button"
 import { ModeToggle } from "../ButtonDarkMode"
 import { cn } from "@/lib/utils"
 
@@ -14,7 +13,7 @@ const Navbar = () => {
     return (
         <nav className=" dark:bg-gray-900  fixed w-full z-20 top-0 start-0 dark:border-gray-600">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link href={'/'} className="flex items-center space-x-1 rtl:space-x-reverse">
+                <Link href={'/main'} className="flex items-center space-x-1 rtl:space-x-reverse">
                     <Image src={Logo} alt="Logo" className="w-8 h-8 rounded-full" />
                     <span className="self-center text-2xl font-bold whitespace-nowrap dark:white">TranscriboApp</span>
                 </Link>
@@ -25,7 +24,9 @@ const Navbar = () => {
                     </div>
 
                     <div className="">
-                        <Button className="rounded-xl">Get Stared</Button>
+                        <Link href="/register" className={
+                            cn(buttonVariants({ variant: "secondary" }), "rounded-xl ")
+                        }>Get Stared</Link>
                     </div>
 
                     <div className="">
@@ -48,8 +49,8 @@ const Navbar = () => {
                             <Button asChild variant='link'>
                                 <Link className={
                                     cn("transition-colors hover:text-foreground/80",
-                                        pathname === "/" ? "underline-offset-4 underline" : "")
-                                } href={'/'}>Home</Link>
+                                        pathname === "/home" ? "underline-offset-4 underline" : "")
+                                } href={'/home'}>Home</Link>
                             </Button>
                         </li>
                         <li>

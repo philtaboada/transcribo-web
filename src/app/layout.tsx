@@ -34,9 +34,7 @@ export default function RootLayout({
                         pauseOnHover
                         theme="colored"
                     />
-                    <Navbar />
                     {children}
-                    <Footer />
                 </ThemeProvider>
             </body>
         </html>
